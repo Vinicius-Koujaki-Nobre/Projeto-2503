@@ -14,3 +14,7 @@ Integrantes:
 
     <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.0.1/mammoth.browser.min.js"></script>
+
+*Tema: Lanchonete (senai)
+ - Variedade de produtos.
+ - (A ver) Cores baseada na paleta de cores do tema escolhido.
