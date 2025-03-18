@@ -1,0 +1,8 @@
+[
+    {
+        "id": 1,
+        "descricao": "Suco de uva Del Valle",
+        "imagem": "../Assets/SucoDelValleUva.webp",
+        "preco": 6.50
+    }
+]
