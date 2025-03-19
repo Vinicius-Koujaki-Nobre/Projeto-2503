@@ -11,7 +11,6 @@ function login(){
             dataEntrada: new Date(),
             id: Math.floor(Math.random() * 100000),
         }
-
         localStorage.setItem("usuario", JSON.stringify(user))
         window.location.href = "../loja/loja.html"
     }
@@ -26,7 +25,6 @@ function fecharError(){
     document.getElementById("nome").style.border = "2px solid white"
     document.getElementById("senha").style.border = "2px solid white"
 }
-
 function showPassword(){
     var imputSenha = document.querySelector("#senha")
     if(imputSenha.getAttribute("type") === "password"){
