@@ -10,7 +10,7 @@ window.onload = function () {
 
 document.addEventListener("DOMContentLoaded", function () {
     //fetch dos produtos e armazenamento na variavel global
-    fetch("../Dados/loja.json")
+    fetch("../Produtos/produto.json")
         .then((response) => response.json())
         .then((data) => {
             produtos = data
@@ -52,5 +52,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 produtosContainer.appendChild(card)
             })
+            .catch((error) => console.error("Erro ao carregar o arquivo JSON", error))
         })
-        .catch((error) => console.error("Erro ao carregar o arquivo JSON", error))
+})
