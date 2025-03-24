@@ -23,7 +23,7 @@ $(document).ready(function(){
 
      
             const removeButton = $("<button>")
-            .addClass("batata")
+            .addClass("carro")
                 .text("❌")
                 .css("margin-left", "10px")
                 .click(function(){
@@ -48,6 +48,12 @@ $(document).ready(function(){
 
     exibirCarrinho();
 });
+
+
+localStorage.setItem("carrinho", JSON.stringify(carrinho));
+
+exibirCarrinho();
+
 
 function gerarDocumentoWord(){
     const  listaElement = document.getElementById("lista")
