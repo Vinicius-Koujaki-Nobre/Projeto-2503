@@ -16,7 +16,7 @@
     {
         "id": 3,
         "descricao": "Bolo de Pote",
-        "imagem": "../../Assets/BoloDePote.jpg",
+        "imagem": "../../Assets/BoloDePote.png",
         "preco": 9.00,
         "detalhes": "Bolo caseiro montado em camadas com recheios saborosos, ideal para uma sobremesa prática e deliciosa."
     },
