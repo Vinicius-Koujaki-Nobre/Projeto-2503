@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iframe</title>
     <link rel="stylesheet" href="iframeStyle.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
 </head>
 
 <body>
@@ -21,7 +22,6 @@
             }
         });
 
-<<<<<<< HEAD:Showroom/iframes/iframe.html
         $("#produtos-container").on("click", ".btn-adicionar-ao-carrinho", function(){
             const indexDoProduto = $(this).data("indice")
             const produtoSelecionado = produtos[indexDoProduto]
@@ -30,9 +30,7 @@
             localStorage.setItem("carrinho", JSON.stringify(carrinho))
             alert("Produto adicionado ao carrinho")
         })
-=======
 
->>>>>>> origin/dev:Showroom/iframe.html
     </script>
     <section>
         
