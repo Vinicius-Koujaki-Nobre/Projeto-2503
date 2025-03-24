@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     document.querySelector(".iframe-container").style.display = "none"; // Esconde o iframe ao carregar
 
-    fetch("../Produtos/produtos.json")
+    fetch("../Produtos/produto.json")
         .then(response => response.json())
         .then(produtos => {
             const container = document.getElementById("s2");
@@ -31,7 +31,7 @@ function abrirIframe(produto) {
 
     // Passando os dados para o iframe usando LocalStorage
     localStorage.setItem("produtoSelecionado", JSON.stringify(produto));
-    iframe.src = "./iframes/Iframe.html";
+    iframe.src = "./iframes/iframe.html";
 
     document.body.classList.add("blurred");
     document.querySelector(".iframe-container").style.display = "flex"; // Exibe o iframe
