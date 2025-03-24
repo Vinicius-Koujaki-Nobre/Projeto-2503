@@ -40,3 +40,24 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+<<<<<<< HEAD
+
+function abrirIframe(produto) {
+    const iframe = document.getElementById("produtoInfo");
+
+    // Passando os dados para o iframe usando LocalStorage
+    localStorage.setItem("produtoSelecionado", JSON.stringify(produto));
+    iframe.src = "./iframes/iframe.html";
+
+    document.body.classList.add("blurred");
+    document.querySelector(".iframe-container").style.display = "flex"; // Exibe o iframe
+}
+
+function fecharIframe() {
+    document.body.classList.remove("blurred");
+    document.querySelector(".iframe-container").style.display = "none"; // Oculta o iframe
+
+}
+
+=======
+>>>>>>> origin/dev
