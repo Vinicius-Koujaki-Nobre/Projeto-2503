@@ -74,8 +74,8 @@ button:hover{
     position: absolute;
     right: 10px;
     top: 8px;
-    opacity: 1;
-    transition: all 150ms ease-in-out;
+    opacity: 0.6;
+    transition: all 200ms ease-in-out;
 }
 .key:hover{
     cursor: pointer;

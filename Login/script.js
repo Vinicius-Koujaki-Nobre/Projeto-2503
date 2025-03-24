@@ -33,3 +33,15 @@ function showPassword(){
         imputSenha.setAttribute("type", "password")
     }
 }
+
+function ajustarPlaceholders() {
+    const nomeInput = document.getElementById('nome');
+    const senhaInput = document.getElementById('senha');
+    
+    if (window.innerWidth <= 500) {
+        nomeInput.placeholder = "Nome";
+        senhaInput.placeholder = "Senha";
+    }
+}
+window.addEventListener('load', ajustarPlaceholders);
+window.addEventListener('resize', ajustarPlaceholders);

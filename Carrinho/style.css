@@ -1,0 +1,36 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --laranja: #f67b00;
+    --branco: #dedede;
+    --azul: #1b41da;
+    --azulEscuro: #10226b;
+    --preto: #000000;
+}
+
+html{
+    background-color: var(--laranja);
+}
+
+a{
+    color: var(--azul);
+}
+
+div{
+    background-color: var(--branco);
+    text-align: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+h1{
+    text-align: center;
+    justify-content: center;
+    text-transform: uppercase;
+    margin: 20px;
+}
+
