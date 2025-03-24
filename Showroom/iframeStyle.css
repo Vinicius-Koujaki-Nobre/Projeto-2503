@@ -64,7 +64,7 @@ section {
     width: 150px;
     height: auto;
     max-width: 250px; /* Evita que a imagem fique muito grande */
-    border: solid 2px;
+    /* border: solid 2px; */
     margin-left: 22px;
 }
 
