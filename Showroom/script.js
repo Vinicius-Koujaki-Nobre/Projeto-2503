@@ -1,57 +1,44 @@
-let produtos
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelector(".iframe-container").style.display = "none"; // Esconde o iframe ao carregar
 
-window.onload = function () {
-    var storedUser = localStorage.getItem("usuario")
-    var user = JSON.parse(storedUser)
-    document.getElementById("user").textContent = user.name
-    document.getElementById("perfil").textContent = user.name
-    document.getElementById("idPerfil").textContent = user.id
-};
-
-document.addEventListener("DOMContentLoaded", function () {
-    //fetch dos produtos e armazenamento na variavel global
     fetch("../Produtos/produto.json")
-        .then((response) => response.json())
-        .then((data) => {
-            produtos = data
-            const produtosContainer = document.getElementById("produtos-container")
+        .then(response => response.json())
+        .then(produtos => {
+            const container = document.getElementById("s2");
 
-            produtos.forEach((produto, index) => {
-                const card = document.createElement("div")
-                card.className = "card"
-                card.style.width = "18rem"
-                card.style.margin = "10px"
-
-                const imagem = document.createElement("img")
-                imagem.src = produto.imagem
-                imagem.className = "card-img-top"
-
-                const cardBody = document.createElement("div")
-                cardBody.className = "card-body"
-
-                const cardTitle = document.createElement("h5")
-                cardTitle.className = "card-title"
-                cardTitle.textContent = produto.descricao
-
-                const cardText = document.createElement("p")
-                cardText.className = "card-text"
-                cardText.textContent = "Preço: $" + produto.preco.toFixed(2)
-
-                const btnAdicionarAoCarrinho = document.createElement("a")
-                btnAdicionarAoCarrinho.href = '#'
-                btnAdicionarAoCarrinho.className = "btn btn-primary btn-adicionar-ao-carrinho"
-                btnAdicionarAoCarrinho.setAttribute("data-indice", index)
-                btnAdicionarAoCarrinho.textContent = "Adicionar ao carrinho"
-
-                cardBody.appendChild(cardTitle)
-                cardBody.appendChild(cardText)
-                cardBody.appendChild(btnAdicionarAoCarrinho)
-
-                card.appendChild(imagem)
-                card.appendChild(cardBody)
-
-                produtosContainer.appendChild(card)
-            })
-            .catch((error) => console.error("Erro ao carregar o arquivo JSON", error))
+            produtos.forEach(produto => {
+                const card = document.createElement("div");
+                card.classList.add("card");
+                card.innerHTML = `
+                    <div class="wrap-img-card">
+                        <img src="${produto.imagem}" alt="${produto.descricao}" width="200px" height="200px">
+                    </div>
+                    <div class="wrap-info-card">
+                        <h3>${produto.descricao}</h3>
+                        <button class="cardButton" onclick='abrirIframe(${JSON.stringify(produto)})'>
+                            <span>Adquirir</span><span>&nbsp;R$${produto.preco.toFixed(2)}</span>
+                        </button>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
         })
-})
+        .catch(error => console.error("Erro ao carregar os produtos:", error));
+});
+
+function abrirIframe(produto) {
+    const iframe = document.getElementById("produtoInfo");
+
+    // Passando os dados para o iframe usando LocalStorage
+    localStorage.setItem("produtoSelecionado", JSON.stringify(produto));
+    iframe.src = "./iframes/iframe.html";
+
+    document.body.classList.add("blurred");
+    document.querySelector(".iframe-container").style.display = "flex"; // Exibe o iframe
+}
+
+function fecharIframe() {
+    document.body.classList.remove("blurred");
+    document.querySelector(".iframe-container").style.display = "none"; // Oculta o iframe
+
+}
