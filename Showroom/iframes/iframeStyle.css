@@ -1,0 +1,113 @@
+@keyframes fadeInBlur  {
+    from {
+        opacity: 0;
+        /* filter: blur(5px); */
+    }
+    to {
+        opacity: 1;
+        /* filter: blur(0px); */
+    }
+}
+
+:root {
+    --laranja: #f67b00;
+    --branco: #dedede;
+    --azul: #1b41da;
+    --azulEscuro: #10226b;
+    --preto: #000000;
+}
+
+/* Aplicando a animação ao body */
+body {
+    animation: fadeInBlur 0.5s ease-out;
+    opacity: 1; 
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    margin: 0;
+    overflow: hidden; /* Evita rolagem dentro do iframe */
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+section {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Lado esquerdo */
+.frame-left-side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--azulEscuro);
+    flex: 1; /* Faz com que ele ocupe metade da tela */
+}
+
+
+
+#left-img img {
+    position: inherit;
+    width: 150px;
+    height: auto;
+    max-width: 250px; /* Evita que a imagem fique muito grande */
+    border: solid 2px;
+    margin-left: 22px;
+}
+
+/* Lado direito */
+.frame-right-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--branco);
+    flex: 1;
+    padding: 20px;
+}
+
+.frame-right-side h3 {
+    text-transform: uppercase;
+    margin-top: 100px;
+    justify-content: top;
+    text-align: center;
+}
+
+#info {
+    margin-top: 10vh;
+    text-align: center;
+}
+
+#buyButton{
+    position: relative;
+    background: var(--azul);
+    color: var(--branco);
+    font-family: sans-serif;
+    letter-spacing: 0px;
+    border-radius: 20px;
+    border: 1px;
+    margin-top: 59px;
+    cursor: pointer;
+    width: 200px;
+    min-height: 30px;
+    height: auto;
+    transition: 500ms;
+}
+
+#buyButton:hover{
+    background: var(--azulEscuro);
+}
+
+
