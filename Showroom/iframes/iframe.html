@@ -20,6 +20,15 @@
                 document.getElementById("buyButton").innerHTML = `<span>Adicionar</span><span>&nbsp;R$${produto.preco.toFixed(2)}</span>`;
             }
         });
+
+        $("#produtos-container").on("click", ".btn-adicionar-ao-carrinho", function(){
+            const indexDoProduto = $(this).data("indice")
+            const produtoSelecionado = produtos[indexDoProduto]
+            let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+            carrinho.push(produtoSelecionado)
+            localStorage.setItem("carrinho", JSON.stringify(carrinho))
+            alert("Produto adicionado ao carrinho")
+        })
     </script>
     <section>
         
