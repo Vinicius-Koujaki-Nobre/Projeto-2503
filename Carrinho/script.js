@@ -18,7 +18,7 @@ $(document).ready(function(){
         $.each(carrinho, function(index, item){
         
             const listItem = $("<li>").text(
-                `${item.descricao} - Preço: $${item.preco}`
+                `${item.descricao} - Preço: $${item.preco.toFixed(2)}`
             );
 
      

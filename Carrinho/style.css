@@ -13,7 +13,11 @@
 }
 
 body{
-    background-color: var(--laranja)
+    display: flex;
+    flex-direction: column;
+    background-color: var(--branco);
+    font-family: sans-serif;
+    max-width: 100%;
 }
 
 a{
@@ -54,22 +58,21 @@ h2{
 
 button{
     border: none;
-    background-color: var(--laranja);
+    background-color: transparent;
     cursor: pointer;
 }
 
 #sc{
     padding: 5px;
-    background-color: var(--laranja);
+    background-color: transparent;
     cursor: pointer;
 }
 
 #conta{
-    padding: 5px;
+    padding: 10px;
     background-color: var(--branco);
     border-radius: 999px;
     text-transform: uppercase;
-    margin-left: 45vw;
     margin-top: 50px;
 }
 
@@ -77,6 +80,6 @@ button{
     cursor: pointer;
     background-color: var(--azul);
     color: var(--branco);
-    transform: scale(1.1);
+    /* transform: scale(1.1); */
     transition: all 200ms ease-in-out;
 }
