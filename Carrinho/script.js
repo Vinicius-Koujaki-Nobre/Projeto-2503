@@ -67,17 +67,19 @@ function gerarDocumentoWord(){
     const totalHtml = totalElement.innerHTML
 
     const conteudoHtml = `
-        <html>
-            <head>
-                <meta charset="UTF-8" />
-            </head>
-            <body>
-                <h1>Pedido Confirmado</h1>
-                ${listaHtml}
-                <br><br>
-                ${totalHtml}
-            </body>
-        </html>
+    <html>
+        <head>
+            <meta charset="UTF-8" />
+        </head>
+        <body>
+            <h1>Pedido Confirmado</h1>
+            ${listaHtml}
+            <br><br>
+            ${totalHtml}
+            <br><br>
+            <p>Agradeçemos por sua preferência!</p>
+        </body>
+    </html>
     `;
 
     const blob = new Blob([conteudoHtml], {type: "application/msword"});

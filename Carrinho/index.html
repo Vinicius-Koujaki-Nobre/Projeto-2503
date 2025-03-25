@@ -10,13 +10,15 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <a id="Volta" href="../Showroom/">◀</a>
+    <a id="Volta" href="../Showroom/">⫷</a>
     <h1>Carrinho</h1>
-    <div id="lista"></div>
+    <div id="container">
+        <div id="lista"></div>
+    </div>
     <h2 id="total"></h2>
-    <button onclick="gerarDocumentoWord()">Realizar pedido</button>
+    <button id="conta" onclick="gerarDocumentoWord()">Realizar pedido</button>
     <p id="pedido">
-        <button id="sc" onclick="successClose()">❌</button>
+    <button id="sc" onclick="successClose()">❌</button>
     </p>
     <script src="script.js"></script> 
 </body>
