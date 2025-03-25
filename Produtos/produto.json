@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "descricao": "Sanduíche Natural",
+        "imagem": "../../Assets/Sanduiche.jpg",
+        "preco": 8.00,
+        "detalhes": "Delicioso sanduíche natural com pão integral, peito de frango desfiado, alface e tomate, perfeito para uma refeição leve e saudável."
+    },
+    {
+        "id": 2,
+        "descricao": "Coxinha",
+        "imagem": "../../Assets/Coxinha.webp",
+        "preco": 8.50,
+        "detalhes": "Tradicional coxinha de frango com massa crocante por fora e recheio cremoso por dentro, perfeita para qualquer momento."
+    },
+    {
+        "id": 3,
+        "descricao": "Bolo de Pote",
+        "imagem": "../../Assets/BoloDePote.png",
+        "preco": 9.00,
+        "detalhes": "Bolo caseiro montado em camadas com recheios saborosos, ideal para uma sobremesa prática e deliciosa."
+    },
+    {
+        "id": 4,
+        "descricao": "Croissant",
+        "imagem": "../../Assets/Crossaint.webp",
+        "preco": 7.99,
+        "detalhes": "Croissant francês com massa folhada amanteigada e leve, ótimo para acompanhar um café."
+    },
+    {
+        "id": 5,
+        "descricao": "Maçã",
+        "imagem": "../../Assets/Maca.webp",
+        "preco": 6.50,
+        "detalhes": "Maçã fresca e suculenta, cheia de vitaminas e perfeita para um lanche saudável."
+    },
+    {
+        "id": 6,
+        "descricao": "Café",
+        "imagem": "../../Assets/Cafe.webp",
+        "preco": 6.00,
+        "detalhes": "Café preto coado na hora, com sabor intenso e aroma marcante, ideal para começar o dia com energia."
+    },
+    {
+        "id": 7,
+        "descricao": "Suco Del Valle (Uva)",
+        "imagem": "../../Assets/SucoDelValleUva.webp",
+        "preco": 6.00,
+        "detalhes": "Suco Del Valle sabor uva, feito com suco de frutas selecionadas, refrescante e sem conservantes artificiais."
+    },
+    {
+        "id": 8,
+        "descricao": "Suco Del Valle (Pêssego)",
+        "imagem": "../../Assets/SucoDelVallePessego.webp",
+        "preco": 6.00,
+        "detalhes": "Suco Del Valle sabor pêssego, delicioso e nutritivo, perfeito para acompanhar qualquer refeição."
+    },
+    {
+        "id": 9,
+        "descricao": "Coca-Cola",
+        "imagem": "../../Assets/CocaCola.jpg",
+        "preco": 7.00,
+        "detalhes": "Refrigerante Coca-Cola, clássico e refrescante, ideal para momentos de descontração."
+    },
+    {
+        "id": 10,
+        "descricao": "Guaraná",
+        "imagem": "../../Assets/Guarana.webp",
+        "preco": 7.00,
+        "detalhes": "Guaraná natural com sabor autêntico, uma bebida energética e revigorante."
+    }
+]

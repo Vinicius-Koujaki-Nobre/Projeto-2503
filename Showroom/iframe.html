@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iframe</title>
+    <link rel="stylesheet" href="iframeStyle.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+</head>
+
+<body>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const produto = JSON.parse(localStorage.getItem("produtoSelecionado"));
+    
+            if (produto) {
+                document.getElementById("left-img").innerHTML = `<img src="${produto.imagem}" alt="${produto.descricao}" width="100%">`;
+                document.getElementById("nomeLanche").textContent = produto.descricao;
+                document.getElementById("infoLanche").textContent = produto.detalhes;
+                document.getElementById("buyButton").innerHTML = `<span>Adicionar</span><span>&nbsp;R$${produto.preco.toFixed(2)}</span>`;
+            }
+        });
+
+        $("#produtos-container").on("click", ".btn-adicionar-ao-carrinho", function(){
+            const indexDoProduto = $(this).data("indice")
+            const produtoSelecionado = produtos[indexDoProduto]
+            let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+            carrinho.push(produtoSelecionado)
+            localStorage.setItem("carrinho", JSON.stringify(carrinho))
+            alert("Produto adicionado ao carrinho")
+        })
+
+    </script>
+    <section>
+        
+        <div class="frame-left-side">
+            <div id="left-img">
+                
+            </div>
+        </div>
+        <div class="frame-right-side">
+            <div>
+                <h3 id="nomeLanche"></h3>
+            </div>
+            <div id="info">
+                <p id="infoLanche">
+                    
+                </p>
+            </div>
+            <button id="buyButton">
+                <span>Adicionar</span>
+                <span>&nbsp;Preço</span>
+            </button>
+        </div>
+    </section>
+</body>
+
+</html>
