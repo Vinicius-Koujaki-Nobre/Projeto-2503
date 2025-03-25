@@ -16,8 +16,9 @@
 
 /*NavBar da ShowRoom*/
 
-.nav-tabs{
+ul{
     background-color: var(--azulEscuro);
+    min-width: auto;
 }
 
 /* Hover dos botões de locomoção e carrinho */
@@ -33,8 +34,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-
+    position: relative;
+    background-size: cover;
+    background-position: center;
 }
 
 #s1 img{
@@ -43,9 +45,11 @@
     justify-content: center;
     align-items: center;
     align-self: center;
-    width: 100rem;
+    min-width: 100%;
     height: 43.5rem;
-
+    position: relative;
+    background-size: cover;
+    background-position: center;
 }
 
 /* Cartão */
@@ -211,3 +215,8 @@ footer img:hover{
     z-index: 1000000;
 }
 
+@media (width<400){
+    #s1{
+        margin-left: 200px;
+    }
+}
