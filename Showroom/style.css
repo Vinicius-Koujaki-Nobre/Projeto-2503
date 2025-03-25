@@ -30,59 +30,23 @@
 
 /* Banner */
 #s1{
-    background-position: 20px;
     display: flex;
-    align-items: end;
+    align-items: center;
     justify-content: center;
-    height: auto;
- 
-    /* width: auto; */
+    height: 100vh;
+
 }
 
-
-/* Fundo do banner */
-#img-wrap-left{
-    background-color: var(--laranja);
-    min-height: 90vh;
-    max-width: 110vw;
-    min-width: 40%;
-    width: 90vw;
-}
-
-#img-wrap-right{
-    min-height: 90vh;
-    max-width: 110vw;
-    width: 80vw;
-    background-image: url(../Assets/Frente-senai.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-
-#img-wrap-right h3{
-    text-align: center !important;
+#s1 img{
+  
+    display: flex;
     justify-content: center;
-    background-size: cover !important;
-    margin-top: 28px;
-}
-/* Texto da esquerda Banner */
-#img-wrap-left p{
-    font-family:sans-serif;
-    text-align: center;
-    justify-content: center;
-    margin-top: 50px;
-    color: white;
-    font-size: large;
-}
-/* Texto da direita Banner */
-#img-wrap-right p{
-    font-family: sans-serif;
-    text-align: center;
-    margin-left: 5%;
-    color: white;
-    font-size: large;
-}
+    align-items: center;
+    align-self: center;
+    width: 100rem;
+    height: 47rem;
 
+}
 
 /* Cartão */
 #s2{
@@ -247,15 +211,3 @@ footer img:hover{
     z-index: 1000000;
 }
 
-
-@media (width<800px){
-    #s1{flex-direction: column;}
-    #img-wrap-left{
-        margin-right: 10px;
-    }
-    #img-wrap-right{
-        align-items: stretch;
-        width: 1200px;
-       
-    }
-}
