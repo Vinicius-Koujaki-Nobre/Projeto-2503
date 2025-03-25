@@ -69,13 +69,14 @@ button{
     background-color: var(--branco);
     border-radius: 999px;
     text-transform: uppercase;
-    justify-content: center;
-    align-items: center;
+    margin-left: 45vw;
+    margin-top: 50px;
 }
 
 #conta:hover{
     cursor: pointer;
     background-color: var(--azul);
     color: var(--branco);
+    transform: scale(1.1);
     transition: all 200ms ease-in-out;
 }
