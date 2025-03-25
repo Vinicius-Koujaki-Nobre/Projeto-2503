@@ -12,7 +12,7 @@ function login(){
             id: Math.floor(Math.random() * 100000),
         }
         localStorage.setItem("usuario", JSON.stringify(user))
-        window.location.href = "../loja/loja.html"
+        window.location.href = "../Showroom/index.html"
     }
     else{
         document.getElementById("error-modal").style.display = "flex"
@@ -33,3 +33,15 @@ function showPassword(){
         imputSenha.setAttribute("type", "password")
     }
 }
+
+function ajustarPlaceholders() {
+    const nomeInput = document.getElementById('nome');
+    const senhaInput = document.getElementById('senha');
+    
+    if (window.innerWidth <= 500) {
+        nomeInput.placeholder = "Nome";
+        senhaInput.placeholder = "Senha";
+    }
+}
+window.addEventListener('load', ajustarPlaceholders);
+window.addEventListener('resize', ajustarPlaceholders);
